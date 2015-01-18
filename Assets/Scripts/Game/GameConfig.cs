@@ -12,4 +12,5 @@ public class GameConfig : MonoBehaviour {
 
 	public static string TAG_GROUND = "Groud";
 	public static string TAG_BULLET = "Bullet";
+	public static string TAG_PLAYER = "Player";
 }

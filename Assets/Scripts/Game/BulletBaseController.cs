@@ -24,7 +24,7 @@ public class BulletBaseController : MonoBehaviour {
 			ballVector.z = Mathf.Sin(2 * Mathf.PI * transform.eulerAngles.x / 360) * Mathf.Cos(2 * Mathf.PI * transform.eulerAngles.y / 360);
 			ballVector.y = Mathf.Cos(2 * Mathf.PI * transform.eulerAngles.x / 360);
 
-			GameObject ball = Instantiate(bulletPF, transform.position + ballVector * 5, Quaternion.identity) as GameObject;
+			GameObject ball = Instantiate(bulletPF, transform.position, Quaternion.identity) as GameObject;
 			// 力を加える
 			ball.rigidbody.AddForce(ballVector * FORCE);
 			Debug.Log("AddForce =" + ballVector * FORCE + "," + (ballVector * FORCE).magnitude);

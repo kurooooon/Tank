@@ -33,6 +33,7 @@ public class TerrainController : MonoBehaviour {
 
 	void OnCollisionEnter (Collision col) {
 
+		//弾
 		if (col.gameObject.tag == GameConfig.TAG_BULLET) {
 //			// 穴を掘る
 //			TerrainData data = _terrainParam.terrainData;
@@ -82,6 +83,7 @@ public class TerrainController : MonoBehaviour {
 				}
 			}
 			terrain.terrainData.SetHeights(0, 0, _heights);
+
 			// ヒット。
 //			for (var cannon: GameObject in [player, other]) {
 //				if ((cannon.transform.position - collision.transform.position).magnitude
@@ -89,6 +91,15 @@ public class TerrainController : MonoBehaviour {
 //					cannon.GetComponent(cannonScript).Hit();
 //				}
 //			}
+		}
+
+		//プレイヤー
+		if (col.gameObject.tag == GameConfig.TAG_PLAYER) {
+			Debug.Log (col.transform.position.y);
+			//ある閾値お超えたら通過させる
+			if (col.transform.position.y < 5) {
+				Destroy (col.collider);
+			}
 		}
 	}
 

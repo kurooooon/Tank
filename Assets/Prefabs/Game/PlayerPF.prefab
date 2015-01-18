@@ -15,7 +15,7 @@ GameObject:
   - 54: {fileID: 5400000}
   m_Layer: 0
   m_Name: PlayerPF
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.0644913, y: 18.1145344, z: 27.6407681}
+  m_LocalPosition: {x: 52.0644913, y: 12.6898632, z: 27.6407681}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 400002}
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b998cb34374c64693bbe315c3b685bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 15
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
