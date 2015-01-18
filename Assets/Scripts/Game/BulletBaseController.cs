@@ -8,8 +8,9 @@ using System.Collections;
 public class BulletBaseController : MonoBehaviour {
 
 	public GameObject bulletPF;
+	public int force = 500;
+
 	private GameObject _bulletBase;
-	private const float FORCE = 500.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -26,8 +27,8 @@ public class BulletBaseController : MonoBehaviour {
 
 			GameObject ball = Instantiate(bulletPF, transform.position, Quaternion.identity) as GameObject;
 			// 力を加える
-			ball.rigidbody.AddForce(ballVector * FORCE);
-			Debug.Log("AddForce =" + ballVector * FORCE + "," + (ballVector * FORCE).magnitude);
+			ball.rigidbody.AddForce(ballVector * force);
+			Debug.Log("AddForce =" + ballVector * force + "," + (ballVector * force).magnitude);
 			// 発射元の砲台
 			//ball.GetComponent(ballScript).cannon = transform;
 		}
